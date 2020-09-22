@@ -1,3 +1,14 @@
+<?php
+session_start();
+include "db.php";
+if(empty($_SESSION['uname'])){
+	?>
+	<script>
+		document.location = "admin-login.php";
+	</script>
+	<?php
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,20 +19,70 @@
 </head>
 <body style="background: #f3f3f3;font-family: 'Source Sans Pro', Helvetica, sans-serif;">
 	<div class="container">
+		<div class="jumbotron text-center">
+			<h1>Admin Page</h1>
+		</div>
+		<nav class="navbar navbar-expand-md bg-light navbar-light shadow-sm sticky-top">
+		  <!-- Brand -->
+		  <a class="navbar-brand" href="#">Admin</a>
+
+		  <!-- Toggler/collapsibe Button -->
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <!-- Navbar links -->
+		  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+		    <ul class="navbar-nav">
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">Blog</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">Settings</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="logout-admin.php">Logout</a>
+		      </li>
+		    </ul>
+		  </div>
+		</nav>
 		<br>
-		<center>
-			<img src="images/logo.svg" alt="" />
-			<h3 class="text-center my-4">Admin login</h3>
-		</center>
-		<div class="card form-card" style="border-radius: 6px;">
-			<div class="card-body">
-				<label style="font-size: 13px;font-weight: bold;">Username :</label>
-				<input type="username" style="border-radius: 6px;" name="username" id="username" class="username form-control" autocomplete="off">
-				<br>
-				<label style="font-size: 13px;font-weight: bold;">Password :</label>
-				<input type="password" style="border-radius: 6px;" name="password" id="password" class="password form-control">
-				<br>
-				<button class="btn btn-success btn-block">Login</button>
+		<div class="row">
+			<div class="col">
+				<div class="card">
+					<div class="card-header">
+						<h4>Card 1</h4>
+					</div>
+					<div class="card-body p-5">
+						<div class="card-text">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card">
+					<div class="card-header">
+						<h4>Card 1</h4>
+					</div>
+					<div class="card-body p-5">
+						<div class="card-text">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card">
+					<div class="card-header">
+						<h4>Card 1</h4>
+					</div>
+					<div class="card-body p-5">
+						<div class="card-text">
+							
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
