@@ -50,6 +50,8 @@ if(empty($_SESSION['uname'])){
 					</div>
 				</div>
 			</div>
+		</div><br>
+		<div class="row">
 			<div class="col-sm-6">
 				<div class="card">
 					<div class="card-header">

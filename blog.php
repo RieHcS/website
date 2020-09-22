@@ -1,3 +1,7 @@
+<?php
+session_start();
+include "db.php";
+?>
 <!DOCTYPE HTML>
 <!--
 	Stellar by HTML5 UP
@@ -28,12 +32,27 @@
 
 						<!-- Content -->
 							<section id="content" class="main">
-								<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
-								<h2>Magna feugiat lorem</h2>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis fames ac ante ipsum primis in faucibus.</p>
-								<p>Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Consequat leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit enim turpis lorem ipsum dolor sit amet feugiat. Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet est velit quis lorem.</p>
-								<h2>Tempus veroeros</h2>
-								<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
+								<h2 style="font-weight: bold;">Articles</h2>
+								<?php
+									$sql_fetch_articles = "SELECT * FROM `blog_posts` ORDER BY id DESC";
+									$result = mysqli_query($con,$sql_fetch_articles);
+									$i = mysqli_num_rows($result);
+									while($row = mysqli_fetch_array($result)){
+										?>
+										<div class="card" style="padding: 10px;border-radius:10px;box-shadow: 0px 2px 6px rgba(0,0,0,0.2);max-width: 540px;max-height: 149px;overflow: hidden;cursor: pointer;" onclick="document.location ='article.php?id=<?php echo $row['id'];?>'">
+											<div class="img_card" style="width:100px;height: 100px;background: #eee;float: right;"></div>
+											<div class="card-header" style="border-bottom:1px solid #ddd;padding: 10px;">
+												<span class="article_link" style="color:dodgerblue;font-weight:normal;"><?php echo $i."). ".$row['title']?></span>
+											</div>
+											<div class="card-body" style="padding: 10px;">
+												<p style="font-size:15px;"><?php echo $row['context']?></p>
+											</div>
+										</div>
+										<br>
+										<?php
+										$i--;
+									}
+								?>
 							</section>
 
 					</div>
