@@ -17,18 +17,6 @@ if(!empty($_SESSION['uname'])){
 	<?php
 	include "bootstrap.php";
 	?>
-	<style type="text/css">
-	.form-card{
-		width: 300px;
-		margin:auto;
-	}
-	@media screen and (max-width:400px){
-		.form-card{
-			width:100%;
-
-		}
-	}
-</style>
 </head>
 <body style="background: #f3f3f3;font-family: 'Source Sans Pro', Helvetica, sans-serif;">
 	<div class="container">
