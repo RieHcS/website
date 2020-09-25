@@ -38,33 +38,6 @@ if(empty($_SESSION['uname'])){
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-6">
-				<div class="card">
-					<div class="card-header">
-						<h4>Card 1</h4>
-					</div>
-					<div class="card-body p-5">
-						<div class="card-text">
-							
-						</div>
-					</div>
-				</div>
-			</div>
-		</div><br>
-		<div class="row">
-			<div class="col-sm-6">
-				<div class="card">
-					<div class="card-header">
-						<h4>Card 1</h4>
-					</div>
-					<div class="card-body p-5">
-						<div class="card-text">
-							
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 	</div>
 	<?php
 		include "admin-footer.php";
