@@ -39,6 +39,7 @@
 				border-radius: 70px;
 				padding:8px 15px;
 				z-index: 999;
+				box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
 			}
 		</style>
 	</head>
@@ -213,25 +214,25 @@
 									<div class="col-sm-4 p-3 bg-light border" style="display: flex;justify-content: center;align-items: center;min-height: 50vh;">
 										<div class="text-center" style="">
 											<div class="service_art center" style="margin:auto;width:100px;height: 100px;"></div><br>
-											<div class="service_texts text-center"></div>
+											<div class="service_texts text-center" style="font-size:15px;"></div>
 										</div>
 									</div>
 									<div class="col-sm-8 p-4">
-										<label class="control-label text-dark">Name</label>
+										<label class="control-label text-dark" style="font-size:12px;">Name</label>
 										<input type="text" name="" class="form-control text-dark border">
 										<br>
-										<label class="control-label text-dark">Email</label>
+										<label class="control-label text-dark" style="font-size:12px;">Email</label>
 										<input type="email" name="" class="form-control text-dark border">
 										<br>
-										<label class="control-label text-dark">Description</label>
+										<label class="control-label text-dark" style="font-size:12px;">Description</label>
 										<textarea name="" class="form-control text-dark border" rows="5"></textarea><br>
 										<center>
 											<div class="row p-0">
 												<div class="col-6 px-4">
-													<button class="btn btn-sm btn-float btn-primary float-left" style="border:0px;">Proceed</button>
+													<button class="btn btn-sm btn-float text-light border bg-primary float-left" style="border:0px;">Proceed</button>
 												</div>
 												<div class="col-6 px-4">
-													<button class="btn btn-sm btn-float btn-danger" style="border:0px;" onclick="close_modal();">Cancel</button>
+													<button class="btn btn-sm btn-float text-dark border bg-light" style="border:0px;" onclick="close_modal();">Cancel</button>
 												</div>
 											</div>
 										</center>
@@ -243,9 +244,18 @@
 			</div>
 
 			<script type="text/javascript">
+				$('#myModal').hasClass('in');
+
+				setInterval(function(){
+					if($('#myModal').hasClass('in')==true){
+						$('body').css('overflow','hidden');
+					}else{
+						$('body').css('overflow','');
+					}
+				},500);
+
 				function toggle_modal(text,image,service_texts){
 					$("#service_modal").modal('toggle');
-					$('body').css('overflow','hidden');
 					
 					$(".service_heading").html(text);
 					$(".service_texts").html(service_texts);
