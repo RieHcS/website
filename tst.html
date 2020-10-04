@@ -3,8 +3,8 @@
 <head>
 	<title>Eye Logo</title>
 	<style type="text/css">
-		root{
-			---color:red;
+		:root{
+			---color:dodgerblue;
 		}
 		body{
 			min-height: 100vh;
@@ -42,7 +42,7 @@
 			animation: rotate_whole_eye 3s linear infinite;
 			width:30px;
 			height: 30px;
-			border:3px solid dodgerblue;
+			border:3px solid var(---color);
 			border-radius: 50%;
 			margin-left:auto;
 			margin-right:auto;
@@ -53,8 +53,8 @@
 			width:20px;
 			height: 20px;
 			border:3px solid transparent;
-			border-right:solid dodgerblue;
-			border-bottom:solid dodgerblue;
+			border-right:solid var(---color);
+			border-bottom:solid var(---color);
 			border-radius: 50%;
 			margin:8%;
 		}
@@ -63,15 +63,15 @@
 			width:10px;
 			height:10px;
 			border:3px solid transparent;
-			border-left:solid dodgerblue;
-			border-top:solid dodgerblue;
+			border-left:solid var(---color);
+			border-top:solid var(---color);
 			border-radius: 50%;
 			margin:10%;
 		}
 		.eye_pupil_three{
 			width:8px;
 			height:8px;
-			background: dodgerblue;
+			background: var(---color);
 			border-radius: 50%;
 			margin:8%;
 		}

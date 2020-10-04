@@ -18,6 +18,9 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<style type="text/css">
+			:root{
+			---color:#00bbdd;
+		}
 			.service_card{
 				box-shadow: 0px 6px 15px rgba(0,0,0,0.15);
 				padding:25px !important;
@@ -58,6 +61,72 @@
 				font-weight: bold;
 				font-size: 20px;
 			}
+			@keyframes rotate_eye{
+			0%{transform: rotate(0deg);}
+			50%{transform: rotate(360deg);}
+			100%{transform: rotate(0deg);}
+		}
+		@keyframes rotate_whole_eye{
+			0%{transform: rotate(0deg);}
+			100%{transform: rotate(360deg);}
+		}
+		.eye_container{
+			width:90px;
+			height: 90px;
+			background: #eee;
+			margin: auto;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.eye_body{
+			width: 45px;
+			height: 45px;
+			border:2px solid var(---color);
+			border-radius: 75% 5%;
+			margin-left:auto;
+			position: relative;
+			transform: rotate(45deg);
+			margin-right:auto;
+		}
+		.eye_retina{
+			animation: rotate_whole_eye 3s linear infinite;
+			width:30px;
+			height: 30px;
+			border:3px solid var(---color);
+			border-radius: 50%;
+			margin-left:auto;
+			margin-right:auto;
+			margin-top:4px;
+		}
+		.eye_pupil_one{
+			animation: rotate_eye 5s ease infinite;
+			width:20px;
+			height: 20px;
+			border:3px solid transparent;
+			border-right:solid var(---color);
+			border-bottom:solid var(---color);
+			border-radius: 50%;
+			margin:8%;
+		}
+		.eye_pupil_two{
+			animation: rotate_eye 5s ease infinite;
+			width:10px;
+			height:10px;
+			border:3px solid transparent;
+			border-left:solid var(---color);
+			border-top:solid var(---color);
+			border-radius: 50%;
+			margin:10%;
+		}
+		.eye_pupil_three{
+			width:8px;
+			height:8px;
+			background: var(---color);
+			border-radius: 50%;
+			margin:8%;
+		}	
 		</style>
 	</head>
 	<body class="is-preload">
@@ -72,7 +141,17 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<span class="logo"><img src="images/my_logo.png" alt="" /></span>
+						<span class="logo"><div class="eye_container">
+							<div class="eye_body">
+								<div class="eye_retina">
+									<div class="eye_pupil_one">
+										<div class="eye_pupil_two">
+											<div class="eye_pupil_three"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div></span>
 						<h1>RieHcS</h1>
 						<p>Power to help you.</p>
 					</header>
