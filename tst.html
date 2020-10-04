@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Eye Logo</title>
+	<style type="text/css">
+		root{
+			---color:red;
+		}
+		body{
+			min-height: 100vh;
+			justify-content: center;
+			align-items: center;
+			display: flex;
+		}
+		@keyframes rotate_eye{
+			0%{transform: rotate(0deg);}
+			50%{transform: rotate(360deg);}
+			100%{transform: rotate(0deg);}
+		}
+		@keyframes rotate_whole_eye{
+			0%{transform: rotate(0deg);}
+			100%{transform: rotate(360deg);}
+		}
+		.eye_container{
+			width:90px;
+			height: 90px;
+			background: #eee;
+			border-radius: 50%;
+		}
+		.eye_body{
+			width: 45px;
+			height: 45px;
+			border:2px solid var(---color);
+			border-radius: 75% 5%;
+			margin-left:auto;
+			position: relative;
+			transform: rotate(45deg);
+			margin-right:auto;
+			margin-top:20px;
+		}
+		.eye_retina{
+			animation: rotate_whole_eye 3s linear infinite;
+			width:30px;
+			height: 30px;
+			border:3px solid dodgerblue;
+			border-radius: 50%;
+			margin-left:auto;
+			margin-right:auto;
+			margin-top:4px;
+		}
+		.eye_pupil_one{
+			animation: rotate_eye 5s ease infinite;
+			width:20px;
+			height: 20px;
+			border:3px solid transparent;
+			border-right:solid dodgerblue;
+			border-bottom:solid dodgerblue;
+			border-radius: 50%;
+			margin:8%;
+		}
+		.eye_pupil_two{
+			animation: rotate_eye 5s ease infinite;
+			width:10px;
+			height:10px;
+			border:3px solid transparent;
+			border-left:solid dodgerblue;
+			border-top:solid dodgerblue;
+			border-radius: 50%;
+			margin:10%;
+		}
+		.eye_pupil_three{
+			width:8px;
+			height:8px;
+			background: dodgerblue;
+			border-radius: 50%;
+			margin:8%;
+		}
+	</style>
+</head>
+<body>
+	<div class="eye_container">
+		<div class="eye_body">
+			<div class="eye_retina">
+				<div class="eye_pupil_one">
+					<div class="eye_pupil_two">
+						<div class="eye_pupil_three"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
