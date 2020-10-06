@@ -3292,14 +3292,14 @@ input, select, textarea {
 					box-shadow: inset 0 0 0 1px transparent;
 				}
 
-					#nav ul li a:hover {
+					/*#nav ul li a:hover {
 						background-color: rgba(222, 222, 222, 0.25);
 					}
 
 					#nav ul li a.active {
 						background-color: #ffffff;
 						box-shadow: none;
-					}
+					}*/
 
 		#nav.alt {
 			position: fixed;
