@@ -12,7 +12,6 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -21,6 +20,25 @@
 			body{
 				background: #222;
 				color:#fff;
+			}
+			.primary{
+				background: dodgerblue !important;
+			}
+			#header{
+				background: url(banner/bg4.jpg) center no-repeat;
+				background-size: cover;
+				position: relative;
+			}
+			.header_dark{
+				padding: 7em 5em 4em 5em ;
+				width:100%;
+				height: 100%;
+				background: rgba(0,0,0,0.6);
+				text-align: center;
+			}
+			.primary:hover{
+				text-decoration: none;
+				opacity: 0.6;
 			}
 			#main{
 				background: #333;
@@ -33,12 +51,13 @@
 				background: #222;
 				color:#fff;
 			}
-			#nav li:hover{
-				background: #444 !important;
+			#nav li a:hover{
+				background: #555 !important;
 				color:#fff !important;
+				text-decoration: none;
 			}
 			#nav .active{
-				background: #333;
+				background: #666;
 				color:#fff;
 			}
 			:root{
@@ -93,6 +112,10 @@
 		@keyframes rotate_whole_eye{
 			0%{transform: rotate(0deg);}
 			100%{transform: rotate(360deg);}
+		}
+		h2{
+			color:#fff !important;
+			font-weight: bolder;
 		}
 		.eye_container{
 			width:90px;
@@ -165,19 +188,20 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<span class="logo"><div class="eye_container">
-							<div class="eye_body">
-								<div class="eye_retina">
-									<div class="eye_pupil_one">
-										<div class="eye_pupil_two">
-											<div class="eye_pupil_three"></div>
+						<div class="header_dark">
+							<!--<span class="logo"><div class="eye_container">
+								<div class="eye_body">
+									<div class="eye_retina">
+										<div class="eye_pupil_one">
+											<div class="eye_pupil_two">
+												<div class="eye_pupil_three"></div>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-						</div></span>
-						<h1>RieHcS</h1>
-						<p>Power to help you.</p>
+							</div></span>-->
+							<h1>RieHcS</h1><p>Power to help you.</p>
+						</div>
 					</header>
 
 				<!-- Nav -->

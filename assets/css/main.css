@@ -1,4 +1,4 @@
-@import url(fontawesome-all.min.css);
+#@import url(fontawesome-all.min.css);
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
 
 /*
@@ -3071,10 +3071,10 @@ input, select, textarea {
 
 /* Header */
 
-	#header {
+	/*#header {
 		padding: 5em 5em 1em 5em ;
 		text-align: center;
-	}
+	}*/
 
 		#header h1 {
 			margin: 0 0 0.25em 0;
@@ -3085,9 +3085,9 @@ input, select, textarea {
 			letter-spacing: -0.025em;
 		}
 
-		#header.alt {
+		/*#header.alt {
 			padding: 7em 5em 4em 5em ;
-		}
+		}*/
 
 			#header.alt h1 {
 				font-size: 3.25em;
