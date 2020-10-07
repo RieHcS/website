@@ -3123,7 +3123,7 @@ input, select, textarea {
 					margin: 0 auto;
 					max-width: 75%;
 				}
-
+/*
 		@media screen and (max-width: 1280px) {
 
 			#header {
@@ -3195,7 +3195,7 @@ input, select, textarea {
 					padding: 3.5em 1em 0.5em 1em ;
 				}
 
-		}
+		}*/
 
 		body.is-preload #header.alt > * {
 			opacity: 0;
