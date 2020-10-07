@@ -17,9 +17,16 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<style type="text/css">
+			@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=UnifrakturMaguntia&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 			body{
 				background: #222;
 				color:#fff;
+				font-family: 'Lato', sans-serif;
+			}
+			h1,h2,h3,h4,h5{
+				color:#fff !important;
+				font-weight:bold;
 			}
 			.primary{
 				background: dodgerblue !important;
@@ -35,6 +42,7 @@
 				height: 100%;
 				background: rgba(0,0,0,0.6);
 				text-align: center;
+				background:;
 			}
 			.primary:hover{
 				text-decoration: none;
@@ -104,76 +112,6 @@
 				font-weight: bold;
 				font-size: 20px;
 			}
-			@keyframes rotate_eye{
-			0%{transform: rotate(0deg);}
-			50%{transform: rotate(360deg);}
-			100%{transform: rotate(0deg);}
-		}
-		@keyframes rotate_whole_eye{
-			0%{transform: rotate(0deg);}
-			100%{transform: rotate(360deg);}
-		}
-		h2{
-			color:#fff !important;
-			font-weight: bolder;
-		}
-		.eye_container{
-			width:90px;
-			height: 90px;
-			background: #eee;
-			margin: auto;
-			border-radius: 50%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-		.eye_body{
-			width: 45px;
-			height: 45px;
-			border:2px solid var(---color);
-			border-radius: 75% 5%;
-			margin-left:auto;
-			position: relative;
-			transform: rotate(45deg);
-			margin-right:auto;
-		}
-		.eye_retina{
-			animation: rotate_whole_eye 3s linear infinite;
-			width:30px;
-			height: 30px;
-			border:3px solid var(---color);
-			border-radius: 50%;
-			margin-left:auto;
-			margin-right:auto;
-			margin-top:4px;
-		}
-		.eye_pupil_one{
-			animation: rotate_eye 5s ease infinite;
-			width:20px;
-			height: 20px;
-			border:3px solid transparent;
-			border-right:solid var(---color);
-			border-bottom:solid var(---color);
-			border-radius: 50%;
-			margin:8%;
-		}
-		.eye_pupil_two{
-			animation: rotate_eye 5s ease infinite;
-			width:10px;
-			height:10px;
-			border:3px solid transparent;
-			border-left:solid var(---color);
-			border-top:solid var(---color);
-			border-radius: 50%;
-			margin:10%;
-		}
-		.eye_pupil_three{
-			width:8px;
-			height:8px;
-			background: var(---color);
-			border-radius: 50%;
-			margin:8%;
-		}	
 		</style>
 	</head>
 	<body class="is-preload">
@@ -200,7 +138,7 @@
 									</div>
 								</div>
 							</div></span>-->
-							<h1>RieHcS</h1><p>Power to help you.</p>
+							<h1 style="font-family: 'Audiowide', cursive;">RieHcS</h1><p>Power to help you.</p>
 						</div>
 					</header>
 
@@ -277,7 +215,7 @@ We are totally transparent, We don't apply any hidden fee. Every services offere
 							<section id="second" class="main special">
 								<header class="major">
 									<h2>Growth</h2>
-									<p> Latest report  RieHcS&trade; we have served & grow till the time. <br><br>
+									<p> Latest report of <span style="font-family: 'Audiowide', cursive;">RieHcS</span>&trade;, we have served & grown till the time. <br><br>
 									
 									</p>
 								</header>
@@ -354,35 +292,35 @@ We are totally transparent, We don't apply any hidden fee. Every services offere
 			</div>
 
 			<div class="modal fade" id="service_modal" style="z-index: 99999;">
-				<div class="modal-dialog modal-dialog-centered" style="color:#333;">
-					<div class="modal-content" style="border-radius: 20px;box-shadow: 0px 10px 30px rgba(0,0,0,0.3);border:0px;overflow: hidden;">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content bg-dark text-light" style="border-radius: 20px;box-shadow: 0px 10px 30px rgba(0,0,0,0.3);border:0px;overflow: hidden;">
 						<div class="modal-header pb-1 pt-4 pl-4">
-							<h2 style="font-weight: bold;" class="service_heading text-dark" >hello</h2>
+							<h2 style="font-weight: bold;" class="service_heading text-light">hello</h2>
 						</div>
-						<div class="modal-body  p-0">
+						<div class="modal-body p-0">
 								<div class="row" style="margin:auto;">
-									<div class="col-sm-4 p-3 bg-light border" style="display: flex;justify-content: center;align-items: center;min-height: 50vh;">
+									<div class="col-sm-4 p-3 bg-dark" style="display: flex;justify-content: center;align-items: center;min-height: 50vh;">
 										<div class="text-center" style="">
 											<div class="service_art center" style="margin:auto;width:100px;height: 100px;"></div><br>
 											<div class="service_texts text-center" style="font-size:15px;"></div>
 										</div>
 									</div>
-									<div class="col-sm-8 p-4">
-										<label class="control-label text-dark" style="font-size:12px;">Name</label>
+									<div class="col-sm-8 p-4 text-light">
+										<label class="control-label text-light" style="font-size:12px;">Name</label>
 										<input type="text" name="" class="form-control text-dark border">
 										<br>
-										<label class="control-label text-dark" style="font-size:12px;">Email</label>
+										<label class="control-label text-light" style="font-size:12px;">Email</label>
 										<input type="email" name="" class="form-control text-dark border">
 										<br>
-										<label class="control-label text-dark" style="font-size:12px;">Description</label>
-										<textarea name="" class="form-control text-dark border" rows="5"></textarea><br>
+										<label class="control-label text-light" style="font-size:12px;">Description</label>
+										<textarea name="" class="form-control text-light bg-dark border" rows="5"></textarea><br>
 										<center>
 											<div class="row p-0">
 												<div class="col-6 px-4">
-													<button class="btn btn-sm btn-float text-light border bg-primary float-left" style="border:0px;">Proceed</button>
+													<button class="btn btn-sm btn-float text-light bg-primary float-left" style="border:0px;">Proceed</button>
 												</div>
 												<div class="col-6 px-4">
-													<button class="btn btn-sm btn-float text-dark border bg-light" style="border:0px;" onclick="close_modal();">Cancel</button>
+													<button class="btn btn-sm btn-float text-light border bg-dark" style="border:0px;" onclick="close_modal();">Cancel</button>
 												</div>
 											</div>
 										</center>
