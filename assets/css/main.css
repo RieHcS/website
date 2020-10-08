@@ -3316,16 +3316,11 @@ input, select, textarea {
 				#nav.alt ul li a {
 					font-size: 0.9em;
 				}
-		.mobile_navbar{
-			display:none;
-		}
+		
 		@media screen and (max-width: 736px) {
 
 			#nav {
 				display: none;
-			}
-			.mobile_navbar{
-				display:block;
 			}
 
 				#nav + #main {

@@ -14,7 +14,9 @@
 		<style type="text/css">
 			@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=UnifrakturMaguntia&display=swap');
 			@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
-			
+			html{
+				scroll-behavior: smooth;
+			}
 			body{
 				background: #222;
 				color:#fff;
@@ -148,7 +150,7 @@
 			}
 		</style>
 	</head>
-	<body class="is-preload">
+	<body data-spy="scroll" data-target=".navbar" data-offset="100">
 		<div class="loading_src">
 			Loading..
 		</div>
@@ -178,14 +180,14 @@
 					</header>
 
 				<!-- Nav -->
-					<nav id="nav">
+					<!--<nav id="nav">
 						<ul>
 							<li><a href="#intro" class="active">Introduction</a></li>
 							<li><a href="#first">Services</a></li>
 							<li><a href="#second">Growth</a></li>
 							<li><a href="#cta">Get Started</a></li>
 						</ul>
-					</nav>
+					</nav>-->
 
 
 					<nav class="navbar navbar-expand-md navbar-dark sticky-top mobile_navbar" style="background:rgba(0,0,0,0.3);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);">
@@ -210,7 +212,7 @@
 					        <a class="nav-link" href="#second">Growth</a>
 					      </li>
 					      <li class="nav-item">
-					        <a class="nav-link" href="#cta">Growth</a>
+					        <a class="nav-link" href="#cta">Get Started</a>
 					      </li>
 					    </ul>
 					  </div>
