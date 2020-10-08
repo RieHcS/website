@@ -1,12 +1,7 @@
 <!DOCTYPE HTML>
-<!--
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>Stellar by HTML5 UP</title>
+		<title>RieHcS | </title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -19,6 +14,7 @@
 		<style type="text/css">
 			@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=UnifrakturMaguntia&display=swap');
 			@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+			
 			body{
 				background: #222;
 				color:#fff;
@@ -28,6 +24,7 @@
 				color:#fff !important;
 				font-weight:bold;
 			}
+
 			.primary{
 				background: dodgerblue !important;
 			}
@@ -42,7 +39,6 @@
 				height: 100%;
 				background: rgba(0,0,0,0.6);
 				text-align: center;
-				background:;
 			}
 			.primary:hover{
 				text-decoration: none;
@@ -53,10 +49,14 @@
 				color:#fff;
 			}
 			#nav{
-				background: #111 !important;
+				backdrop-filter:blur(20px) !important;
+				-webkit-backdrop-filter:blur(20px) !important;
+				background: rgba(0,0,0,0.4) !important;
+				z-index: 99 !important;
 			}
+			
 			#nav li{
-				background: #222;
+				background: transparent;
 				color:#fff;
 				border-radius:0px;
 			}
@@ -72,7 +72,7 @@
 				border-radius:0px;
 			}
 			:root{
-			---color:#00bbdd;
+			--color:#00bbdd;
 		}
 			.service_card{
 				box-shadow: 0px 6px 15px rgba(0,0,0,0.15);
@@ -81,6 +81,7 @@
 				transition: all 0.2s;
 				cursor: pointer;
 				background: #222;
+				border:1px solid #fff;
 			}
 			.service_card:hover{
 				transform: scale(1.1) translateY(-20px);
@@ -114,6 +115,19 @@
 				display: flex;
 				font-weight: bold;
 				font-size: 20px;
+			}
+			a{
+				border:0px;
+			}
+			#intro{
+				position: relative;
+				background:url(banner/crv2.png) center no-repeat;
+				background-size: cover;
+			}
+			@media screen and (max-width: 640px){
+				#intro{
+					background:transparent;
+				}
 			}
 		</style>
 	</head>
@@ -152,18 +166,17 @@
 							<li><a href="#intro" class="active">Introduction</a></li>
 							<li><a href="#first">Services</a></li>
 							<li><a href="#second">Growth</a></li>
-							<li><a href="blog.php">Blog</a></li>
 							<li><a href="#cta">Get Started</a></li>
 						</ul>
 					</nav>
 
 
-					<nav class="navbar navbar-expand-md bg-dark navbar-dark" style="display:none;">
+					<nav class="navbar navbar-expand-md navbar-dark sticky-top mobile_navbar" style="background:rgba(0,0,0,0.3);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);">
 					  <!-- Brand -->
-					  <a class="navbar-brand" href="#">Navbar</a>
+					  <a class="navbar-brand" href="#" style="font-family: 'Audiowide', cursive;">RieHcS</a>
 
 					  <!-- Toggler/collapsibe Button -->
-					  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+					  <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" style="margin-top:-5px;border:0px;">
 					    <span class="navbar-toggler-icon"></span>
 					  </button>
 
@@ -178,9 +191,6 @@
 					      </li>
 					      <li class="nav-item">
 					        <a class="nav-link" href="#second">Growth</a>
-					      </li>
-					      <li class="nav-item">
-					        <a class="nav-link" href="blog.php">Blog</a>
 					      </li>
 					      <li class="nav-item">
 					        <a class="nav-link" href="#cta">Growth</a>
@@ -212,12 +222,12 @@ We are totally transparent, We don't apply any hidden fee. Every services offere
 							</section>
 
 						<!-- First Section -->
-							<section id="first" class="main special">
+							<section id="first" class="main special" style="background:url(banner/b8.png) center no-repeat;background-size:cover;background-attachment:fixed;">
 								<header class="major">
 									<h2>Services</h2>
 								</header>
 								<ul class="features">
-									<li class="service_card" onclick="toggle_modal('Technology & Websites','images/undraw_mobile_web_2g8b.svg','-WebDesign & Development<br>-UI & UX design');">
+									<li class="service_card" onclick="toggle_modal('Technology & Websites','images/undraw_mobile_web_2g8b.svg','-WebDesign & Development<br>-UI & UX design');" style="background:linear-gradient(to right,#ED213A,#93291E);">
 										<span class="icon solid major style1 " style="position: relative;overflow: hidden;border-radius: 0px;background:none;border:0px;width:150px;height: 150px;">
 											<div style="background: url(images/undraw_mobile_web_2g8b.svg)center no-repeat;background-size:90%;width:100%;top:0px;left:0px;height:100%;position: absolute;"></div>
 										</span>
@@ -225,7 +235,7 @@ We are totally transparent, We don't apply any hidden fee. Every services offere
 										<p style="font-size: 18px;">-Website Design & Development<br>
 											-UI & UX design</p>
 									</li>
-									<li class="service_card" onclick="toggle_modal('Digital Marketing Services','images/undraw_predictive_analytics_kf9n.svg','- Search Engine Optimization(SEO) <br>- Social Media Optimization(SMO)');">
+									<li class="service_card" onclick="toggle_modal('Digital Marketing Services','images/undraw_predictive_analytics_kf9n.svg','- Search Engine Optimization(SEO) <br>- Social Media Optimization(SMO)');" style="background:linear-gradient(to right,#2B32B2,#1488CC);">
 										<span class="icon solid major style1" style="position: relative;overflow: hidden;border-radius: 0px;background:none;border:0px;width:150px;height: 150px;">
 											<div style="background: url(images/undraw_predictive_analytics_kf9n.svg)center no-repeat;background-size:100%;width:100%;top:0px;left:0px;height:100%;position: absolute;"></div>
 										</span>
@@ -280,16 +290,14 @@ We are totally transparent, We don't apply any hidden fee. Every services offere
 							</section>
 
 						<!-- Get Started -->
-							<section id="cta" class="main special">
+							<section id="cta" class="main special" style="background:url(banner/b9.png) center no-repeat;background-size:cover;background-attachment:fixed;">
 								<header class="major">
 									<h2>Get Started</h2>
 									<p>Once you get deep details about RieHcS and feel so safe and professional let us navigate you to reach us <br>
 									just feel much comfortable to contact us in our working time.</p>
 								</header>
 								<footer class="major">
-									<ul class="actions special">
-										<li><a href="generic.html" class="button primary">Contact</a></li>
-									</ul>
+										<a href="generic.html" class="btn btn-lg btn-primary">Contact</a>
 								</footer>
 							</section>
 
@@ -298,11 +306,8 @@ We are totally transparent, We don't apply any hidden fee. Every services offere
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-							<h1 style="font-weight: bold;">RieHcS</h1>
+							<h1 style="font-weight: bold;font-family: 'Audiowide', cursive;">RieHcS</h1>
 							<p>Power to help you...</p>
-							<ul class="actions">
-								<li><a href="generic.html" class="button">Learn More</a></li>
-							</ul>
 						</section>
 						<section>
 							<h2>Contact </h2>
@@ -321,12 +326,13 @@ We are totally transparent, We don't apply any hidden fee. Every services offere
 								<li><a href="https://github.com/riehcs" target="_blank" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
 							</ul>
 						</section>
-						<p class="copyright">&copy; <a href="#">All Rights under RieHcS.com</a></p>
 					</footer>
-
+					
 			</div>
+			<hr class="m-0">
+			<div class="text-center m-3">&copy; <a href="#">All Rights under RieHcS.com</a></div>
 
-			<div class="modal fade" id="service_modal" style="z-index: 99999;">
+			<div class="modal fade" id="service_modal" style="z-index: 99999;backdrop-filter:blur(4px);">
 				<div class="modal-dialog modal-dialog-centered">
 					<div class="modal-content bg-dark text-light" style="border-radius: 20px;box-shadow: 0px 10px 30px rgba(0,0,0,0.3);border:0px;overflow: hidden;">
 						<div class="modal-header pb-1 pt-4 pl-4">
@@ -335,17 +341,17 @@ We are totally transparent, We don't apply any hidden fee. Every services offere
 						<div class="modal-body p-0">
 								<div class="row" style="margin:auto;">
 									<div class="col-sm-4 p-3 bg-dark" style="display: flex;justify-content: center;align-items: center;min-height: 50vh;">
-										<div class="text-center" style="">
+										<div class="text-center">
 											<div class="service_art center" style="margin:auto;width:100px;height: 100px;"></div><br>
 											<div class="service_texts text-center" style="font-size:15px;"></div>
 										</div>
 									</div>
 									<div class="col-sm-8 p-4 text-light">
 										<label class="control-label text-light" style="font-size:12px;">Name</label>
-										<input type="text" name="" class="form-control text-dark border">
+										<input type="text" name="" class="form-control text-light bg-dark border">
 										<br>
 										<label class="control-label text-light" style="font-size:12px;">Email</label>
-										<input type="email" name="" class="form-control text-dark border">
+										<input type="email" name="" class="form-control text-light bg-dark border">
 										<br>
 										<label class="control-label text-light" style="font-size:12px;">Description</label>
 										<textarea name="" class="form-control text-light bg-dark border" rows="5"></textarea><br>
